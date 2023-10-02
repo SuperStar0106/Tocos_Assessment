@@ -5,6 +5,8 @@ import express, { Express } from 'express';
 
 import { API_VERSION } from 'config';
 
+import { errorHandlerMiddleware } from 'middlewares';
+
 import appRoutes from 'routes';
 import { MESSAGES } from 'consts';
 
@@ -21,6 +23,7 @@ const backendSetup = (app: Express) => {
   });
 
   app.use(`/api/${API_VERSION}`, appRoutes);
+  app.use(errorHandlerMiddleware);
 
   const server = app.listen(port, () => {
     console.info(MESSAGES.SERVER_RUN_SUCCESS);
