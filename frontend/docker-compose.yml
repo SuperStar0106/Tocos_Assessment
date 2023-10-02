@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  nodeserver:
+    build:
+      context: .
+    image: tocos-frontend
+    ports:
+      - "3000:3000"
