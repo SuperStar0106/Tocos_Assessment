@@ -9,7 +9,7 @@
     "test": "jest --coverage --detectOpenHandles --runInBand",
     "lint": "eslint ./"
   },
-  "author": "Tommy Bergman",
+  "author": "David Lee",
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.14",
